@@ -2,7 +2,7 @@ import * as ort from 'onnxruntime-web';
 import _ from 'lodash';
 
 export async function runNeuralStyleTransfer(processedData: any): Promise<[any, number]>{
-    const session = await ort.InferenceSession.create('/models/nst_onnx_model.onnx', { executionProviders: ['webgl', 'wasm'], graphOptimizationLevel: 'all'});
+    const session = await ort.InferenceSession.create('/models/nst_model_onnx.onnx', { executionProviders: ['webgl', 'wasm'], graphOptimizationLevel: 'all'});
     console.log('Infeence session created');
     const [results, inferenceTime] = await runInference(session, processedData);
     return [results, inferenceTime];

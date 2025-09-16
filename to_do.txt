@@ -1,0 +1,2 @@
+train and add many styles onnx files 
+add loading animation

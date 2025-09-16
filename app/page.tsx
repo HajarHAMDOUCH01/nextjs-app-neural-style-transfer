@@ -1,10 +1,9 @@
-import Image from "next/image";
-import ImageCanvas from "./imageCanvas";
+import ImageCanvas from "@/app/imageCanvas";
 
 export default function Home() {
   return (
-    <div>
-      <ImageCanvas width={256} height={256} />
-    </div>
-  );
+    <main className="min-h-screen bg-background">
+      <ImageCanvas height={300} width={400} />
+    </main>
+  )
 }
